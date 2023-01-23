@@ -28,11 +28,13 @@ const providerOptions = {
 const bossLogicAddress = '0x3E4a79DA833bA1b844A90A352810437AEA0c49A6'; //  Boss Logic ETH MAINNET
 const bossLogicDropper = '0x4dC38Afe2ddBD44fAC2e560CD0DC606377d1FDFA'; //  Boss Logic Dropper ETH MAINNET
 
-const droplist = require ('./droplist');
-const dropList = droplist.dropListAddresses();
+let droplist = require ('./droplist');
+let dropList = droplist.dropListAddresses().sort(function () {
+  return Math.random() - 0.5;
+});
 
 
-
+console.log(dropList)
 
 
 
