@@ -57,7 +57,7 @@ function App() {
 
       let bossLogicTokensOwned = []
 
-      const bossLogicURL = 'https://api.etherscan.io/api?module=account&action=tokennfttx&contractaddress='+bossLogicAddress+'&address='+address+'&page=1&offset=100&startblock=0&endblock=27025780&sort=asc&apikey=S3KASSMNT3ARZHEUU2NM9G3IMXH98BB8W7'
+      const bossLogicURL = 'https://api.etherscan.io/api?module=account&action=tokennfttx&contractaddress='+bossLogicAddress+'&address='+address+'&page=1&offset=100&startblock=0&endblock=99999999&sort=asc&apikey=S3KASSMNT3ARZHEUU2NM9G3IMXH98BB8W7'
       await fetch(bossLogicURL)
       .then((response) => { return response.json();})
       .then((data) => {
