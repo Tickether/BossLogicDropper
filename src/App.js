@@ -55,7 +55,6 @@ console.log(tokenList)
 function App() {
   
   const [web3Provider, setWeb3Provider] = useState(null)
-  //const [globalBossLogicTokens,setBossLogicTokens] = useState([]);
   
   const connectAccount = async () => { 
     try {
@@ -104,6 +103,8 @@ function App() {
         } while (txReceipt[0] == null) ;
         
         console.log(txReceipt[0])
+      } else {
+        console.log('Approved for Transfer')
       }
     } 
     catch (err) {
@@ -122,20 +123,15 @@ function App() {
       );
       
       try {
-        if (tokenList.length === 1877) {
-          
-          // set approval for airdrop contract to move tokens from connected wallet
-          await setApprovalForAll();
-          // shuffle token array for airdrop randomness
-          let tokenRandom = tokenList.sort(function () {
-            return Math.random() - 0.5;
-          });
-          console.log(tokenRandom)
-          const response = await bossLogicDropperContract.BossLogicDrop((dropList), (tokenRandom));
-          console.log('response: ', response) 
-        } else {
-          console.log('something wrong')
-        }
+        // set approval for airdrop contract to move tokens from connected wallet
+        await setApprovalForAll();
+        // shuffle token array for airdrop randomness
+        let tokenRandom = tokenList.sort(function () {
+          return Math.random() - 0.5;
+        });
+        console.log(tokenRandom)
+        const response = await bossLogicDropperContract.BossLogicDrop((dropList), (tokenRandom));
+        console.log('response: ', response) 
       } 
       catch (err) {
         console.log('error', err )
