@@ -130,7 +130,7 @@ function App() {
           return Math.random() - 0.5;
         });
         console.log(tokenRandom)
-        const response = await bossLogicDropperContract.BossLogicDrop((dropList), (tokenRandom));
+        const response = await bossLogicDropperContract.BossLogicDrop(bossLogicAddress, (dropList), (tokenRandom));
         console.log('response: ', response) 
       } 
       catch (err) {
