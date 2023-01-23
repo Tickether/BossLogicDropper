@@ -5,6 +5,8 @@ import bossLogicDrop from './BossLogicDropper.json';
 import { ethers, BigNumber } from "ethers";
 import { useState } from 'react';
 import Web3Modal from "web3modal";
+//import WalletConnectProvider from "@walletconnect/web3-provider";
+//import {CoinbaseWalletSDK} from "@coinbase/wallet-sdk";
 
 
 const providerOptions = {
@@ -24,8 +26,8 @@ const providerOptions = {
   */
 };
 
-const bossLogicAddress = '0xA7Be35c7A52B4677375DDC5121b8375b8eF6CdD2'; // 0x3E4a79DA833bA1b844A90A352810437AEA0c49A6 Boss Logic ETH MAINNET
-const bossLogicDropper = '0x0388348AF99E5e57123C21F84027cfB7979eF5E3'; // 0x3E4a79DA833bA1b844A90A352810437AEA0c49A6 Boss Logic Dropper ETH MAINNET
+const bossLogicAddress = '0x3E4a79DA833bA1b844A90A352810437AEA0c49A6'; //  Boss Logic ETH MAINNET
+const bossLogicDropper = '0x4dC38Afe2ddBD44fAC2e560CD0DC606377d1FDFA'; //  Boss Logic Dropper ETH MAINNET
 
 const droplist = require ('./droplist');
 const dropList = droplist.dropListAddresses();
@@ -217,7 +219,7 @@ function App() {
     }
   }
 
-  const handleDecrement = () => {
+const handleDecrement = () => {
     if (mintAmount <= 877) return;
     setMintAmount(mintAmount - 3 );
 };
