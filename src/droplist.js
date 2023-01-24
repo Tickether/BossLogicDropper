@@ -176,7 +176,7 @@ const dropListAddresses = () => {
     "0x2afbca276f75578f9a4149729b4c374b7863b133",
     "0xc0aeb85d6277a12a5456c737c86b807887553012",
     "0x7f713909feb05125f670b5fbe9e9aada778b9717",
-    "0xecbd5ec1d9Fe65aba5c4b759d6470ccf2f5f00bb",
+    "0xecbd5ec1d9fe65aba5c4b759d6470ccf2f5f00bb",
     "0x223e5fcea22a600561a5fd7acb86b8cd0be11c40",
     "0x8a412f808c332157bcbab9fbbb329982d78aeacc",
     "0x3f3361d0e96c3195905dc6ff4e925c29e0a7e0f3",
